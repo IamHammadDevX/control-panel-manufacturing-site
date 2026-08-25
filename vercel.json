@@ -1,5 +1,9 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "vite",
   "buildCommand": "pnpm --filter @workspace/orbit-controls run build",
-  "outputDirectory": "artifacts/orbit-controls/dist/public"
+  "outputDirectory": "artifacts/orbit-controls/dist/public",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/index.html" }
+  ]
 }
