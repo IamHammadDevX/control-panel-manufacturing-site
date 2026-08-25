@@ -346,3 +346,5 @@
 .control-visual:hover .panel-photo { transform:scale(1.06); filter:saturate(.98) contrast(1.1) brightness(.9); }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration:.01ms !important; transition-duration:.01ms !important; } .motion-ready main > :is(.section, .section-tight, .quote-strip, .page-intro) { opacity:1; transform:none; } }
 .quote-strip .hero-actions { justify-content:center; }
+
+.quote-strip .hero-actions .button-primary { margin-top:0; }
