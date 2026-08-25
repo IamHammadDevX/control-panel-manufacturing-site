@@ -79,6 +79,13 @@ function Footer() {
 }
 
 function Shell({ children }: { children: ReactNode }) {
+  useEffect(() => {
+    const targets = Array.from(document.querySelectorAll<HTMLElement>('main > .section, main > .section-tight, main > .quote-strip, main > .page-intro'));
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); observer.unobserve(entry.target); } }), { threshold: 0.12 });
+    document.documentElement.classList.add('motion-ready');
+    targets.forEach((target) => observer.observe(target));
+    return () => { observer.disconnect(); document.documentElement.classList.remove('motion-ready'); };
+  }, []);
   return <div className="site-shell"><Header />{children}<Footer /></div>;
 }
 
