@@ -14,7 +14,6 @@ const navItems = [
   { href: '/about', label: 'About Us' },
   { href: '/control-panel', label: 'Control Panel' },
   { href: '/contact', label: 'Contact Us' },
-  { href: '/contact', label: 'Request a Quote' },
 ];
 
 function Seo({ title, description }: { title: string; description: string }) {
