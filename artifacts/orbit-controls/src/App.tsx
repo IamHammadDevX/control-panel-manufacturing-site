@@ -72,7 +72,7 @@ function Footer() {
         </div>
         <div><div className="footer-heading">Navigate</div><div className="footer-links">{navItems.map((item) => <Link key={item.href} href={item.href} data-testid={`link-footer-${item.label.toLowerCase().replaceAll(' ', '-')}`}>{item.label}</Link>)}</div></div>
         <div><div className="footer-heading">Capabilities</div><div className="footer-links"><Link href="/control-panel#build">Build-to-print</Link><Link href="/control-panel#engineering">Panel engineering</Link><Link href="/control-panel#testing">Testing & validation</Link></div></div>
-        <div><div className="footer-heading">Connect</div><div className="footer-links"><a href="mailto:projects@orbitcontrols.com" data-testid="link-footer-email">projects@orbitcontrols.com</a><a href="tel:+13617650825" data-testid="link-footer-phone">+1 (361) 765-0825</a><span className="muted">North America / Central Time</span></div></div>
+        <div><div className="footer-heading">Connect</div><div className="footer-links"><a href="mailto:projects@orbitcontrols.com" data-testid="link-footer-email">projects@orbitcontrols.com</a><a href="tel:+13617650825" data-testid="link-footer-phone">+1 (361) 765-0825</a><span className="muted">8614 Fairbanks N Houston Rd, Houston, TX 77064</span></div></div>
       </div>
       <div className="container-wide footer-bottom"><span>© 2026 ORBIT CONTROLS LLC, All rights reserved.</span><span>UL 508A SHOP · BUILT IN THE USA</span></div>
     </footer>
