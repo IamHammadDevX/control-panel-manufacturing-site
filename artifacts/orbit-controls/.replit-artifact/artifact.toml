@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Orbit Controls"
+description = "A premium industrial control panel manufacturing website for OEMs, system integrators, machine builders, and industrial automation teams across North America."
+version = "1.0.0"
+id = "artifacts/orbit-controls"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23955
+
+[services.development]
+run = "pnpm --filter @workspace/orbit-controls run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/orbit-controls", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/orbit-controls/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23955"
+BASE_PATH = "/"

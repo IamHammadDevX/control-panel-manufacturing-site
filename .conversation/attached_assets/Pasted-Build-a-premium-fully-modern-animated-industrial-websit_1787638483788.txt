@@ -1,0 +1,235 @@
+Build a premium, fully modern, animated industrial website inspired by https://wets.ai/.
+
+Important:
+The structure, pages, section order, and business content should closely follow wets.ai because the client wants a similar website. However, do not make it look like a basic copy. Rebuild it as a much more premium, modern, engineering-focused website with smooth animations and a high-end industrial automation feel.
+
+Website type:
+Custom Control Panel Manufacturing / Industrial Automation / UL 508A Panel Shop website.
+
+Goal:
+Create a professional website that feels like a premium engineering/manufacturing company serving OEMs, system integrators, machine builders, and industrial automation companies across North America.
+
+Style direction:
+Use a modern “Orbit Engineers / premium industrial tech” style.
+Dark premium hero section, metallic engineering visuals, animated grid background, subtle electric-blue/steel accents, smooth scroll motion, 3D/technical feel, clean typography, strong trust-building layout.
+
+Do not make it:
+- crypto/neon
+- childish
+- generic SaaS
+- basic template
+- too colorful
+- plain static brochure
+
+Preferred stack:
+Next.js + TypeScript + Tailwind CSS + Framer Motion.
+Use lucide-react for icons.
+Use CSS/Framer Motion animations.
+If 3D is used, use lightweight CSS/Canvas/Three.js only if performance remains good.
+
+Pages to build:
+1. Home
+2. About Us
+3. Control Panel / Services
+4. Contact Us / Request a Quote
+
+Global layout:
+- Responsive navbar
+- Logo placeholder
+- Desktop nav links: Home, About Us, Control Panel, Contact Us, Request a Quote
+- Mobile menu
+- Premium footer with company links, services links, and contact info
+- CTA buttons throughout the website
+- Smooth page/section transitions
+
+Home page sections:
+1. Hero section
+   - Heading similar meaning to: Custom Control Panel & Industrial Automation
+   - Subheading about high-quality custom electrical control panels for OEMs, system integrators, machine builders, and industrial automation companies.
+   - CTA buttons: Request a Quote, Talk to Our Team
+   - Animated industrial/engineering hero visual.
+   - Include badge text like: Your Trusted UL 508A Partner Across North America.
+   - Include trust chips: Built to Print, Built to Last, Built for Your Success.
+
+2. Stats / trust section
+   - UL 508A Certified Shop
+   - 100% Tested Before Shipment
+   - USA & Canada / North America
+   - 20+ Years of Experience
+   - Use animated counters.
+
+3. Manufacturing Services
+   - Custom Control Panels
+   - High-Volume Panel Production
+   - Industrial Labelling & Engraving
+   - Use modern animated cards with hover effects.
+   - Each card should have image/visual area, description, and bullet points.
+
+4. Manufacturing Process
+   - 01 Project Review & Quotation
+   - 02 Procurement & Planning
+   - 03 Panel Assembly
+   - 04 Testing & QA
+   - Use animated timeline or step cards.
+
+5. Industries We Serve
+   - Original Equipment Manufacturers
+   - System Integrators
+   - Industrial End Users
+   - Include industry chips:
+     Manufacturing, Food & Beverage, Packaging, Material Handling, Water & Wastewater, Oil & Gas, Mining, Renewable Energy, Automotive, Pharmaceutical, Chemical Processing.
+
+6. Why Choose Us
+   - Built on Experience. Driven by Quality.
+   - Benefits list:
+     UL 508A Certified Manufacturing
+     Customer-Supplied Design Builds
+     Rigorous Quality Control & Testing
+     High-Volume Production Capabilities
+     Fast, Reliable Lead Times
+     Experienced Manufacturing Team
+     Clear Project Communication
+     North American Manufacturing
+     Flexible Production Capacity
+     Competitive Pricing Without Compromising Quality
+
+7. Quality section
+   - Quality You Can Trust
+   - QC-inspired card/visual
+   - Bullet list:
+     Accurate Component Installation
+     Clean Wire Routing
+     Proper Torque Verification
+     Electrical Testing
+     Documentation Review
+     Final Quality Inspection
+
+8. Final CTA
+   - Ready to Start Your Next Project?
+   - Request a Quote Today
+   - Talk to Our Team
+
+About page sections:
+1. Hero
+   - About the company as a trusted partner for custom control panel manufacturing.
+2. Experience / partnership section
+   - 20+ years manufacturing excellence.
+3. Why companies choose us
+   - Customer-Focused Partnership
+   - Precision Manufacturing
+   - Quality Without Compromise
+   - Scalable Production
+4. Manufacturing process
+   - Same process but expanded.
+5. Quality assurance process
+   - Component Verification
+   - Wire & Terminal Inspection
+   - Torque Verification
+   - Electrical Continuity Testing
+   - Documentation Review
+   - Final Visual Inspection
+6. North American footprint
+7. Mission section
+8. CTA
+
+Control Panel / Services page sections:
+1. Hero
+   - Precision-Built Control Panels for OEMs & System Integrators.
+2. Capabilities grid:
+   - PLC Control Panels
+   - Motor Control Panels
+   - VFD Control Panels
+   - HMI & Operator Interface Panels
+   - Power Distribution Panels
+   - Junction & Terminal Panels
+3. Built to documentation section
+   - Electrical Schematics
+   - Wiring Diagrams
+   - Bill of Materials
+   - Panel Layout Drawings
+   - Customer Standards
+   - Engineering Specifications
+4. Quality process section
+5. Industries section
+6. Why partner with us
+7. Prototype to production section
+8. CTA
+
+Contact page sections:
+1. Hero
+   - Let’s Discuss Your Control Panel Requirements.
+2. Contact info cards:
+   - Phone
+   - Email
+   - Location
+3. Request quote form:
+   - Full Name
+   - Company
+   - Email Address
+   - Phone
+   - Panel Type select
+   - Quantity Required
+   - Required Delivery Timeline
+   - Special Testing / Certification
+   - Project Description
+   - Submit button
+4. What to include for accurate quote
+5. FAQ section:
+   - What information do you need for a quote?
+   - Can you build from customer drawings?
+   - Do you support prototype and production builds?
+   - Do you ship throughout North America?
+6. Final CTA
+
+Animation requirements:
+- Smooth hero reveal on load.
+- Animated dark grid or blueprint background.
+- Floating metallic/technical abstract shape in hero.
+- Scroll reveal for sections.
+- Staggered card animations.
+- Animated stats counters.
+- Hover lift/glow on service cards.
+- Timeline animation for manufacturing process.
+- Subtle parallax on hero visual.
+- CTA button hover animation.
+- Keep animations premium and smooth, not distracting.
+
+Visual requirements:
+- Use real industrial/manufacturing/control-panel imagery where possible.
+- If exact WETS images are available in assets, use them.
+- Otherwise use high-quality placeholder image areas with clear labels so I can replace them later.
+- Use image alt text properly.
+- First viewport must clearly communicate the company is about control panel manufacturing, not generic AI/SaaS.
+- Use steel, graphite, dark navy/black, white, and electric blue accent.
+- Avoid purple gradients, childish neon, and generic abstract blobs.
+
+Content:
+Use professional rewritten content based on wets.ai’s meaning and structure.
+Keep the same business message:
+- custom electrical control panels
+- OEMs
+- system integrators
+- machine builders
+- industrial automation
+- build-to-print
+- high-volume production
+- labelling and engraving
+- UL 508A
+- tested before shipment
+- North America
+
+Code quality:
+- Clean reusable components.
+- Create section components instead of one huge file.
+- Mobile-first responsive design.
+- No layout overflow.
+- Good spacing and typography.
+- SEO metadata for each page.
+- Accessible buttons/forms.
+- Contact form can be frontend-only for now, with clean success state after submit.
+- Add comments only where necessary.
+
+Deliverable:
+A complete working website ready to run locally.
+Include setup instructions in README.
+After building, run lint/build if available and fix any errors.
