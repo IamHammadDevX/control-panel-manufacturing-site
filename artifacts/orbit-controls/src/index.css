@@ -141,7 +141,7 @@
 .pulse-dot { width:7px; height:7px; border-radius:50%; background:hsl(var(--accent)); box-shadow: 0 0 0 5px rgba(240,197,99,.13); }
 
 .control-visual { min-height: 530px; position:relative; animation: riseIn .9s .16s both ease-out; }
-.visual-meta { position:absolute; top:0; right:0; color:#647c87; font-size:9px; }
+.visual-meta { position:absolute; top:8px; right:12px; color:#d4e8f0; font-size:10px; font-weight:500; letter-spacing:.06em; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
 .panel-frame { position:absolute; inset: 42px 24px 12px 30px; background:linear-gradient(133deg,#293944,#111b22 56%,#202e36); border:1px solid #647782; box-shadow: 24px 24px 0 rgba(0,0,0,.18), 0 0 0 7px #101920, 0 0 0 8px #354953; transform: perspective(850px) rotateY(-9deg) rotateX(3deg); }
 .panel-frame::before { content:''; position:absolute; inset:14px; border:1px solid rgba(186,211,218,.35); }
 .panel-cap { position:absolute; top:29px; left:28px; color:#b7cdd3; font:9px var(--app-font-mono); letter-spacing:.08em; }
@@ -159,7 +159,7 @@
 .gauge::after { content:''; position:absolute; inset:9px; border-radius:50%; background:#16232a; border:1px solid #50656d; }
 .gauge::before { content:''; width:24px; height:1px; position:absolute; top:35px; left:36px; background:hsl(var(--accent)); transform:rotate(-31deg); transform-origin:left; z-index:2; }
 .wire { position:absolute; border-top:1px solid rgba(117,180,202,.4); width:110px; right:-60px; top:52%; transform:rotate(31deg); transform-origin:left; }
-.visual-tag { position:absolute; bottom:2px; left:0; font:9px var(--app-font-mono); color:#718792; }
+.visual-tag { position:absolute; bottom:8px; left:12px; font:10px var(--app-font-mono); color:#c8dce3; font-weight:500; letter-spacing:.06em; text-shadow: 0 1px 3px rgba(0,0,0,.5); }
 .visual-tag span { color:hsl(var(--primary)); }
 
 .ticker { border-top:1px solid #263a44; border-bottom:1px solid #263a44; padding:15px 0; color:#75909a; overflow:hidden; white-space:nowrap; }
