@@ -1173,3 +1173,98 @@ html[data-theme='dark'] .nav-link::after {
     grid-template-columns: 1fr;
   }
 }
+/* Animated footer links */
+.footer-links a {
+  position: relative;
+  width: fit-content;
+  padding: 3px 0 5px 0;
+  color: #b7d7ff;
+  transform: translateX(0);
+  transition: color .24s ease, transform .24s ease;
+}
+
+.footer-links a::before {
+  content: '';
+  position: absolute;
+  left: -15px;
+  top: 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: #2f8ae6;
+  box-shadow: 0 0 16px rgba(47, 138, 230, .65);
+  transform: translateY(-50%) scale(0);
+  transition: transform .24s ease;
+}
+
+.footer-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #2f8ae6, rgba(47, 138, 230, 0));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .28s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #ffffff;
+  transform: translateX(10px);
+  outline: none;
+}
+
+.footer-links a:hover::before,
+.footer-links a:focus-visible::before,
+.footer-links a:hover::after,
+.footer-links a:focus-visible::after {
+  transform: translateY(-50%) scale(1);
+}
+
+.footer-links a:hover::after,
+.footer-links a:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.footer-links a[data-active='true'] {
+  color: #2f8ae6;
+}
+
+.footer-links a[data-active='true']::after {
+  transform: scaleX(1);
+  background: #2f8ae6;
+}
+
+html[data-theme='light'] .site-footer .footer-links a:hover,
+html[data-theme='light'] .site-footer .footer-links a:focus-visible {
+  color: #ffffff;
+}
+
+@media (max-width: 520px) {
+  .footer-links a:hover,
+  .footer-links a:focus-visible {
+    transform: translateX(6px);
+  }
+}
+/* Anchor scroll targets */
+#build,
+#engineering,
+#testing {
+  scroll-margin-top: 104px;
+}
+
+.header-actions {
+  display: inline-flex !important;
+  align-items: center;
+  gap: 12px;
+}
+
+.theme-toggle {
+  flex: 0 0 auto;
+  visibility: visible;
+  opacity: 1;
+}
