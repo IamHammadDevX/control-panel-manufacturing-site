@@ -110,7 +110,7 @@ function PanelVisual() {
 }
 
 function Ticker() {
-  const items = ['UL 508A SHOP', 'BUILD-TO-PRINT', 'NORTH AMERICA', 'TESTED BEFORE SHIPMENT', 'PLC + VFD INTEGRATION', 'DOCUMENTED DELIVERABLES'];
+  const items = ['UL 508A SHOP', 'BUILD-TO-PRINT', 'NORTH AMERICA', 'TESTED BEFORE SHIPMENT', 'DOCUMENTED DELIVERABLES'];
   return <div className="ticker"><div className="ticker-track">{[...items, ...items].map((item, i) => <span className="ticker-item" key={`${item}-${i}`}>{item}</span>)}</div></div>;
 }
 
