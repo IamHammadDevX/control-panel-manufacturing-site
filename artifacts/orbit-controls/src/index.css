@@ -1448,3 +1448,197 @@ html[data-theme='dark'] .ticker-item::before {
     font-size: 8px;
   }
 }
+/* Section theme consistency */
+.section,
+.section-tight,
+.page-intro,
+.hero {
+  background-color: #f7fbff;
+}
+
+.section.dark-band,
+.section-tight.dark-band,
+.section.blueprint-band,
+.section-tight.blueprint-band {
+  background-color: #eef6fd;
+  border-top: 1px solid #d9e8f3;
+  border-bottom: 1px solid #d9e8f3;
+}
+
+.section + .section,
+.section-tight + .section,
+.section + .section-tight {
+  border-top: 1px solid rgba(207, 225, 239, .65);
+}
+
+.feature-panel,
+.service-card,
+.process-step,
+.form-frame,
+.quote-guidance,
+.success-state {
+  background: #ffffff !important;
+  border-color: #dbe9f4 !important;
+  color: #142a4f;
+}
+
+.process-step {
+  background: linear-gradient(180deg, #ffffff 0%, #f9fcff 100%) !important;
+}
+
+.section.dark-band .feature-panel,
+.section.dark-band .service-card,
+.section.dark-band .process-step,
+.section-tight.dark-band .feature-panel,
+.section-tight.dark-band .service-card,
+.section-tight.dark-band .process-step,
+.blueprint-band .feature-panel,
+.blueprint-band .service-card,
+.blueprint-band .process-step {
+  background: #ffffff !important;
+  box-shadow: 0 16px 34px rgba(27, 62, 102, .11);
+}
+
+.feature-panel h3,
+.service-card h3,
+.process-step h3,
+.section-title,
+.stat-value {
+  color: #142a4f;
+}
+
+.feature-panel p,
+.service-card p,
+.process-step p,
+.section-intro,
+.about-split p,
+.page-intro p,
+.hero-lede {
+  color: #5d728b;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 7px 14px;
+  border: 1px solid #c9def0;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .72);
+  color: #1767b1;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .12em;
+}
+
+.section-header {
+  align-items: center;
+}
+
+.industry-cloud {
+  justify-content: center;
+}
+
+.trust-chips span,
+.industry-cloud span {
+  background: #ffffff;
+  border-color: #d8e8f3;
+  color: #516985;
+  box-shadow: 0 8px 18px rgba(27, 62, 102, .06);
+}
+
+.quote-strip.blueprint-band {
+  background: #071a37;
+  border: 0;
+}
+
+.quote-strip.blueprint-band .eyebrow {
+  background: rgba(47, 138, 230, .12);
+  border-color: rgba(91, 166, 238, .24);
+  color: #8fc8ff;
+}
+
+html[data-theme='dark'] .section,
+html[data-theme='dark'] .section-tight,
+html[data-theme='dark'] .page-intro,
+html[data-theme='dark'] .hero {
+  background-color: #071322;
+}
+
+html[data-theme='dark'] .section.dark-band,
+html[data-theme='dark'] .section-tight.dark-band,
+html[data-theme='dark'] .section.blueprint-band,
+html[data-theme='dark'] .section-tight.blueprint-band {
+  background-color: #0b1a2d;
+  border-color: #203653;
+}
+
+html[data-theme='dark'] .feature-panel,
+html[data-theme='dark'] .service-card,
+html[data-theme='dark'] .process-step,
+html[data-theme='dark'] .form-frame,
+html[data-theme='dark'] .quote-guidance,
+html[data-theme='dark'] .success-state,
+html[data-theme='dark'] .section.dark-band .feature-panel,
+html[data-theme='dark'] .section.dark-band .service-card,
+html[data-theme='dark'] .section.dark-band .process-step,
+html[data-theme='dark'] .blueprint-band .feature-panel,
+html[data-theme='dark'] .blueprint-band .service-card,
+html[data-theme='dark'] .blueprint-band .process-step {
+  background: #0f2036 !important;
+  border-color: #203653 !important;
+  color: #edf6ff;
+  box-shadow: 0 18px 38px rgba(0, 0, 0, .24);
+}
+
+html[data-theme='dark'] .feature-panel h3,
+html[data-theme='dark'] .service-card h3,
+html[data-theme='dark'] .process-step h3,
+html[data-theme='dark'] .section-title,
+html[data-theme='dark'] .stat-value {
+  color: #edf6ff;
+}
+
+html[data-theme='dark'] .feature-panel p,
+html[data-theme='dark'] .service-card p,
+html[data-theme='dark'] .process-step p,
+html[data-theme='dark'] .section-intro,
+html[data-theme='dark'] .about-split p,
+html[data-theme='dark'] .page-intro p,
+html[data-theme='dark'] .hero-lede {
+  color: #a9bdd2;
+}
+
+html[data-theme='dark'] .eyebrow {
+  background: rgba(47, 138, 230, .10);
+  border-color: rgba(91, 166, 238, .24);
+  color: #8fc8ff;
+}
+
+html[data-theme='dark'] .trust-chips span,
+html[data-theme='dark'] .industry-cloud span {
+  background: #0f2036;
+  border-color: #24405f;
+  color: #b7cff0;
+  box-shadow: none;
+}
+
+@media (max-width: 800px) {
+  .section,
+  .section-tight {
+    padding: 72px 0;
+  }
+
+  .section-header {
+    text-align: center;
+  }
+
+  .section-header .eyebrow {
+    margin-inline: auto;
+  }
+
+  .section-intro {
+    margin-inline: auto;
+  }
+}
