@@ -153,6 +153,8 @@ overrides:
   '@esbuild-kit/esm-loader': npm:tsx@^4.21.0
   esbuild: 0.27.3
 
+pnpmfileChecksum: sha256-BOzYQJ+kfCMkrVr3UG9idFnz9v5Up4IK9TRQUSb3m9A=
+
 importers:
 
   .:
