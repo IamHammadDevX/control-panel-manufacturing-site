@@ -1,6 +1,6 @@
 import { useEffect, useState, type FormEvent, type ReactNode } from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { ArrowRight, Check, ChevronRight, CircuitBoard, ClipboardCheck, Clock3, Factory, FileCheck2, Gauge, Globe2, Mail, MapPin, Menu, Microscope, Phone, ShieldCheck, Sparkles, Wrench, X, Zap } from 'lucide-react';
+import { ArrowRight, Check, ChevronRight, CircuitBoard, ClipboardCheck, Clock3, Factory, FileCheck2, Gauge, Globe2, Mail, MapPin, Menu, Microscope, Moon, Phone, ShieldCheck, Sparkles, Sun, Wrench, X, Zap } from 'lucide-react';
 import { ErrorBoundary } from '@/components/error-boundary';
 import { Toaster } from '@/components/ui/toaster';
 import { TooltipProvider } from '@/components/ui/tooltip';
@@ -38,6 +38,33 @@ function Seo({ title, description }: { title: string; description: string }) {
   return null;
 }
 
+
+function ThemeToggle() {
+  const [theme, setTheme] = useState<'light' | 'dark'>(() => {
+    if (typeof window === 'undefined') return 'light';
+    return window.localStorage.getItem('theme') === 'dark' ? 'dark' : 'light';
+  });
+
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    document.documentElement.style.colorScheme = theme;
+    window.localStorage.setItem('theme', theme);
+  }, [theme]);
+
+  const isDark = theme === 'dark';
+
+  return (
+    <button
+      type="button"
+      className="theme-toggle"
+      onClick={() => setTheme(isDark ? 'light' : 'dark')}
+      aria-label={isDark ? 'Switch to light theme' : 'Switch to dark theme'}
+      data-testid="button-theme-toggle"
+    >
+      {isDark ? <Sun size={18} /> : <Moon size={18} />}
+    </button>
+  );
+}
 function Header() {
   const [location] = useLocation();
   const [open, setOpen] = useState(false);
