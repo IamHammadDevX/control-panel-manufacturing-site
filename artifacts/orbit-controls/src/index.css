@@ -373,49 +373,6 @@
 .quote-strip .hero-actions { justify-content:center; }
 
 .quote-strip .hero-actions .button-primary { margin-top:0; }
-/* Hide removed Control Panel sections */
-#build, #engineering { display:none !important; }
-
-/* Control Panel: Build-to-print section — image frame on right */
-/* Right media frame */
-.section.blueprint-band .about-split > ul {
-  border: 1px solid hsl(var(--card-border));
-  border-radius: 18px;
-  overflow: hidden;
-  min-height: clamp(260px, 32vw, 440px);
-  box-shadow: var(--card-shadow);
-  background: url('/images/img-blueprints-rolled.jpeg') center/cover no-repeat;
-  position: relative;
-  list-style: none;
-}
-.section.blueprint-band .about-split > ul::after {
-  content: 'BUILD-TO-PRINT DOCUMENTATION   •  •  •';
-  position: absolute; left:0; right:0; bottom:0;
-  background: rgba(11,17,23,.88);
-  color:#cfe3ea; border-top:1px solid rgba(90,120,134,.35);
-  padding:12px 18px; font:10px var(--app-font-mono); letter-spacing:.12em; text-transform:uppercase;
-}
-.section.blueprint-band .about-split > ul li { display: none; }
-
-/* Turn eyebrow into pill label */
-.section.blueprint-band .about-split > div .eyebrow { display: none; }
-.section.blueprint-band .about-split > div::before {
-  content: 'BUILT TO YOUR SPECIFICATIONS';
-  display: inline-block;
-  padding: 8px 12px;
-  border: 1px solid hsl(var(--primary));
-  border-radius: 999px;
-  font: 700 10px var(--app-font-mono);
-  letter-spacing: .1em;
-  text-transform: uppercase;
-  color: hsl(var(--primary));
-  margin-bottom: 12px;
-}
-
-/* Make text column wider than image to improve balance */
-.section.blueprint-band .about-split { grid-template-columns: 1.25fr .75fr; }
-.section.blueprint-band .about-split .section-title { margin-top:12px; }
-.section.blueprint-band .about-split .section-title span { color: hsl(var(--primary)); }
 /* WETS AI reference theme */
 :root {
   color-scheme: light;
