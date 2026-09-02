@@ -74,6 +74,9 @@
   html { scroll-behavior: smooth; }
   body { @apply font-sans antialiased bg-background text-foreground; margin: 0; }
   ::selection { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+  h1, h2, h3, h4 { font-weight: 800; color: hsl(var(--foreground)); }
+  p { font-weight: 500; }
+  strong, b { font-weight: 800; color: hsl(var(--foreground)); }
 }
 
 @layer utilities {
@@ -93,6 +96,7 @@
 .container-wide { width: min(1180px, calc(100% - 48px)); margin: 0 auto; }
 .mono { font-family: var(--app-font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .display { font-family: 'Inter', sans-serif; letter-spacing: -.055em; }
+.display { font-family: 'Inter', sans-serif; letter-spacing: -.055em; font-weight: 800; }
 .eyebrow { color: hsl(var(--primary)); font-family: var(--app-font-mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
 .muted { color: hsl(var(--muted-foreground)); }
 
