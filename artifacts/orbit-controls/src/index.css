@@ -262,6 +262,15 @@
 .success-state h3 { font-size:26px; margin:18px 0 8px; }
 .success-state p { color:#9eb3a2; line-height:1.7; font-size:14px; }
 
+/* QA card (About page) */
+.qa-frame { border:1px solid hsl(var(--card-border)); background:hsl(var(--card)); padding:22px; border-radius:14px; box-shadow: var(--card-shadow); }
+.qa-head { display:flex; align-items:center; justify-content:space-between; }
+.qa-head div { font-weight:700; color:hsl(var(--foreground)); }
+.qa-head small { font:9px var(--app-font-mono); color:#6a8796; letter-spacing:.14em; text-transform:uppercase; }
+.qa-rule { height:1px; background:hsl(var(--border)); margin:10px 0 14px; }
+.qa-note { display:flex; align-items:center; gap:8px; font:10px var(--app-font-mono); letter-spacing:.14em; text-transform:uppercase; color:#2ecc71; margin-top:10px; }
+.qa-dot { width:7px; height:7px; border-radius:50%; background:#2ecc71; box-shadow:0 0 8px rgba(46,204,113,.35); display:inline-block; }
+
 .site-footer { padding:60px 0 28px; border-top:1px solid #293d46; background:#091016; }
 .footer-grid { display:grid; grid-template-columns:1.25fr .75fr .75fr .85fr; gap:35px; padding-bottom:56px; }
 .footer-heading { color:#8197a0; font:10px var(--app-font-mono); letter-spacing:.12em; text-transform:uppercase; margin-bottom:18px; }

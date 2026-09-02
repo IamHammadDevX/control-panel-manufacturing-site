@@ -354,13 +354,15 @@ function About() {
               </article>
             ))}
           </div>
-          <div className="form-frame" style={{ marginTop:22 }}>
-            <div className="feature-kicker">Our Quality‑Assurance Process Includes</div>
+          <div className="qa-frame" style={{ marginTop:22 }}>
+            <div className="qa-head"><div>Our Quality Assurance Process Includes</div><small>QA / PRE-SHIP</small></div>
+            <div className="qa-rule" />
             <ul className="feature-list">
               {['Component verification','Wire and terminal inspection','Torque verification','Electrical continuity testing','Documentation review','Final visual inspection'].map((item) => (
                 <li key={item}><Check size={14} /> {item}</li>
               ))}
             </ul>
+            <div className="qa-note"><span className="qa-dot" /> FACTORY ACCEPTANCE TESTING AVAILABLE ON REQUEST</div>
           </div>
         </div>
       </section>
@@ -369,18 +371,21 @@ function About() {
       <section className="section">
         <div className="container-wide about-split">
           <div>
-            <div className="eyebrow">Our footprint</div>
-            <h2 className="section-title display">A North American<br />Manufacturing Footprint</h2>
-            <p className="section-intro">Panels built for harsh, real‑world conditions across industries — installed, commissioned, and supported across USA & Canada.</p>
-            <div className="quote-guidance" style={{ borderLeftColor:'hsl(var(--primary))' }}>
-              <ul className="feature-list" style={{ marginTop:0 }}>
-                {['Industrial facilities and OEMs','Reliable supply‑chain alignment','Documented deliverables','Flexible capacity for spikes','Field & factory test support'].map((item) => (
-                  <li key={item}><Check size={14} /> {item}</li>
-                ))}
-              </ul>
-            </div>
+            <div className="pill"><span style={{display:'inline-block',width:7,height:7,borderRadius:'50%',background:'hsl(var(--primary))',boxShadow:'0 0 8px rgba(83,198,220,.35)',marginRight:8,verticalAlign:'middle'}} />SUPPORTING CUSTOMERS ACROSS NORTH AMERICA</div>
+            <h2 className="section-title display" style={{ marginTop:12 }}>A North American<br />Manufacturing Footprint</h2>
+            <p className="section-intro">Optimize Controls proudly serves customers throughout the United States and Canada from strategically located facilities. Whether you&apos;re building machinery for local customers or deploying systems across multiple facilities, we&apos;re equipped to support your production requirements.</p>
+            <ul className="feature-list" style={{ marginTop:18, gap:0 }}>
+              {['Faster Delivery Times','Responsive Customer Support','Local Manufacturing Expertise','Flexible Production Capacity','Reliable Supply Chain Management'].map((item, i) => (
+                <li key={item} style={{ display:'flex', alignItems:'center', gap:12, padding:'12px 0', borderTop: i === 0 ? '1px solid hsl(var(--border))' : undefined, borderBottom:'1px solid hsl(var(--border))' }}>
+                  <Check size={16} style={{ color:'#2ecc71' }} /> {item}
+                </li>
+              ))}
+            </ul>
           </div>
-          <img className="about-photo" src={`${import.meta.env.BASE_URL}images/img-pump-station.jpeg`} alt="Pump station equipment" />
+          <div className="media-frame">
+            <img className="media-image" src={`${import.meta.env.BASE_URL}images/img-pump-station.jpeg`} alt="North American manufacturing coverage" />
+            <div className="media-bar"><span>USA &amp; CANADA COVERAGE</span><div className="media-dots"><i className="media-dot sky" /><i className="media-dot amber" /><i className="media-dot green" /></div></div>
+          </div>
         </div>
       </section>
 
