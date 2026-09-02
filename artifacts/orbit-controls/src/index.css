@@ -373,6 +373,8 @@
 .quote-strip .hero-actions { justify-content:center; }
 
 .quote-strip .hero-actions .button-primary { margin-top:0; }
+/* Hide removed Control Panel sections */
+#build, #engineering { display:none !important; }
 /* WETS AI reference theme */
 :root {
   color-scheme: light;
