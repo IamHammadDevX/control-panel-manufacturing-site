@@ -320,21 +320,37 @@ function About() {
       <section className="section">
         <div className="container-wide">
           <div style={{ textAlign:'center', marginBottom:34 }}>
-            <div style={{ display:'inline-block', padding:'8px 12px', border:'1px solid hsl(var(--primary))', borderRadius:999, font:'700 10px var(--app-font-mono)', letterSpacing:'.1em', textTransform:'uppercase', color:'hsl(var(--primary))' }}>How we build</div>
+            <div style={{ display:'inline-block', padding:'8px 12px', border:'1px solid hsl(var(--primary))', borderRadius:999, font:'700 10px var(--app-font-mono)', letterSpacing:'.1em', textTransform:'uppercase', color:'hsl(var(--primary))' }}>HOW IT WORKS</div>
             <h2 className="section-title display" style={{ marginTop:12 }}>Our Manufacturing Process</h2>
-            <p className="section-intro" style={{ margin:'12px auto 0', maxWidth:680 }}>A documented, repeatable workflow — from project review through testing — so every panel arrives installation‑ready.</p>
-          </div>     
-          <div className="process-grid compact-process">
+            <p className="section-intro" style={{ margin:'12px auto 0', maxWidth:820 }}>A documented, repeatable workflow that carries your project from drawings to a tested, installation‑ready panel.</p>
+          </div>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:16 }}>
             {[
-              ['01','Project Review & Quotation','We review drawings, requirements, quantities, and delivery expectations.'],
-              ['02','Procurement & Planning','Components, schedule, and build plan align before assembly begins.'],
-              ['03','Panel Assembly','Disciplined assembly, labelling, wiring, and documentation.'],
-              ['04','Testing & QA','Visual, torque, continuity, and functional checks before release.'],
-            ].map(([num,name,copy]) => (
-              <article className="feature-panel" key={num} style={{ minHeight: 'auto' }}>
-                <div className="feature-kicker">STEP {num}</div>
-                <h3 style={{ margin:'10px 0 6px' }}>{name}</h3>
-                <p style={{ margin:0 }}>{copy}</p>
+              {
+                num: '01',
+                title: 'Project Review & Quotation',
+                copy: 'We begin by reviewing your drawings, schematics, bill of materials (BOM), and technical requirements. Our estimating team evaluates component availability, manufacturing complexity, and production timelines to provide an accurate quotation.'
+              },
+              {
+                num: '02',
+                title: 'Procurement & Production Planning',
+                copy: 'Once your order is approved, our procurement specialists source materials from trusted manufacturers while our production team schedules your project to ensure efficient workflow and on‑time delivery.'
+              },
+              {
+                num: '03',
+                title: 'Panel Assembly',
+                copy: 'Our skilled technicians assemble each control panel according to your specifications using standardized manufacturing procedures that ensure repeatability, cleanliness, and accuracy. Throughout production, quality inspections verify every stage of the build.'
+              },
+              {
+                num: '04',
+                title: 'Testing & Quality Assurance',
+                copy: 'Before shipment, every control panel undergoes comprehensive inspection and functional testing. Factory Acceptance Testing (FAT) can also be performed upon request.'
+              }
+            ].map((step) => (
+              <article key={step.num} className="feature-panel" style={{ background:'hsl(var(--card))', border:'1px solid hsl(var(--card-border))', borderRadius:14, padding:'22px 20px', boxShadow:'var(--card-shadow)', minHeight:'auto' }}>
+                <div style={{ display:'inline-flex', alignItems:'center', justifyContent:'center', width:36, height:36, border:'1px solid hsl(var(--border))', background:'hsl(var(--input))', color:'hsl(var(--foreground))', borderRadius:10, font:'700 12px var(--app-font-mono)' }}>{step.num}</div>
+                <h3 style={{ margin:'14px 0 8px' }}>{step.title}</h3>
+                <p style={{ margin:0 }}>{step.copy}</p>
               </article>
             ))}
           </div>
