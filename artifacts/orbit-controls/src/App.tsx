@@ -264,12 +264,51 @@ function About() {
           <div style={{ textAlign:'center', marginBottom:32 }}>
             <div style={{ display:'inline-block', padding:'8px 12px', border:'1px solid hsl(var(--primary))', borderRadius:999, font:'700 10px var(--app-font-mono)', letterSpacing:'.1em', textTransform:'uppercase', color:'hsl(var(--primary))' }}>More than a supplier</div>
             <h2 className="section-title display" style={{ marginTop:12 }}>A Manufacturing Partner, Not Just a Supplier</h2>
-            <p className="section-intro" style={{ margin:'12px auto 0', maxWidth:680 }}>We become a practical extension of your production team — consistent in quality, clear in timing, invested in your project success.</p>
+            <p className="section-intro" style={{ margin:'12px auto 0', maxWidth:820 }}>We become a practical extension of your production team — consistent in quality, clear in timing, invested in your project success.</p>
           </div>
-          <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:16 }}>
-            <article className="feature-panel"><div className="feature-kicker">Customer‑focused Partnership</div><h3>Support that fits schedule</h3><p>Capacity where needed, communication that keeps work moving, and dependable delivery.</p><div className="corner-mark">01</div><img src={`${import.meta.env.BASE_URL}images/site-outdoor-full.jpg`} alt="Outdoor panel install" style={{ position:'absolute', inset:0, opacity:.16, objectFit:'cover', pointerEvents:'none' }} /></article>
-            <article className="feature-panel"><div className="feature-kicker">Precision Manufacturing</div><h3>Repeatable builds, clean execution</h3><p>Documented steps, consistent workmanship, labelled terminations, and verified fasteners.</p><div className="corner-mark">02</div><img src={`${import.meta.env.BASE_URL}images/site-panel-full.jpg`} alt="Panel interior" style={{ position:'absolute', inset:0, opacity:.16, objectFit:'cover', pointerEvents:'none' }} /></article>
-            <article className="feature-panel"><div className="feature-kicker">Quality Without Compromise</div><h3>Defined checks before release</h3><p>Visual, continuity, and torque verification with documentation before shipment.</p><div className="corner-mark">03</div><img src={`${import.meta.env.BASE_URL}images/site-hmi-siemens.jpg`} alt="HMI Siemens" style={{ position:'absolute', inset:0, opacity:.16, objectFit:'cover', pointerEvents:'none' }} /></article>
+          <div style={{ display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:16 }}>
+            {[
+              {
+                badge: 'Customer‑Focused Partnership',
+                title: 'Support that fits schedule',
+                copy: 'We work closely with OEMs, machine builders, automation companies, and engineering firms to understand each project\'s unique requirements. Our goal is to become a seamless extension of your production team — not simply another supplier.',
+                img: 'site-panel-full.jpg',
+                index: '01'
+              },
+              {
+                badge: 'Precision Manufacturing',
+                title: 'Repeatable builds, clean execution',
+                copy: 'Every panel is assembled by experienced technicians using documented processes and strict quality standards. From wire routing to component placement, every detail is inspected to ensure consistent performance.',
+                img: 'site-wiring-detail.jpg',
+                index: '02'
+              },
+              {
+                badge: 'Quality Without Compromise',
+                title: 'Defined checks before release',
+                copy: 'Quality is embedded into every stage of our manufacturing process. Each control panel undergoes thorough inspection and electrical testing before shipment, ensuring it meets your specifications and industry standards.',
+                img: 'img-testing.jpeg',
+                index: '03'
+              },
+              {
+                badge: 'Scalable Production',
+                title: 'Prototype to high volume',
+                copy: 'Whether one prototype, a pilot run, or high‑volume production, we scale efficiently while maintaining consistent quality and attention to detail.',
+                img: 'site-outdoor-full.jpg',
+                index: '04'
+              }
+            ].map((card) => (
+              <article key={card.index} className="feature-panel" style={{ borderRadius:14, overflow:'hidden', padding:0 }}>
+                <div style={{ position:'relative', height:160, overflow:'hidden' }}>
+                  <img src={`${import.meta.env.BASE_URL}images/${card.img}`} alt={card.title} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
+                  <div style={{ position:'absolute', top:10, right:12, background:'rgba(255,255,255,.85)', color:'#35506b', padding:'4px 8px', borderRadius:8, font:'700 10px var(--app-font-mono)', letterSpacing:'.08em' }}>{card.index}</div>
+                </div>
+                <div style={{ padding:22 }}>
+                  <div className="feature-kicker">{card.badge}</div>
+                  <h3 style={{ margin:'10px 0 8px' }}>{card.title}</h3>
+                  <p style={{ margin:0 }}>{card.copy}</p>
+                </div>
+              </article>
+            ))}
           </div>
         </div>
       </section>
