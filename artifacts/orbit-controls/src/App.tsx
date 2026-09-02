@@ -205,14 +205,12 @@ function About() {
   return <Shell>
     <Seo title="About Optimize Controls | Control Panel Manufacturing Partner" description="Optimize Controls is a precision control-panel manufacturing partner for OEMs, integrators, and automation teams." />
     <main>
-      <PageIntro
-        eyebrow="About Optimize Controls"
-        title={<>Your Trusted Partner<br />for Custom Control Panel<br />Manufacturing</>}
-        copy="At Optimize Controls, we believe exceptional control panel manufacturing starts with strong partnerships. Since our founding, we've focused on helping OEMs, system integrators, and industrial automation companies outsource their panel production with complete confidence." />
-
       <section className="section">
         <div className="container-wide about-split">
           <div>
+            <div style={{ display:'inline-block', padding:'8px 12px', border:'1px solid hsl(var(--primary))', borderRadius:'999px', font:'700 10px var(--app-font-mono)', letterSpacing:'.1em', textTransform:'uppercase', color:'hsl(var(--primary))', marginBottom:'14px' }}>About Optimize Controls</div>
+            <h1 className="display" style={{ margin:'6px 0 18px 0', lineHeight:.95 }}>Your Trusted Partner<br />for Custom Control Panel<br />Manufacturing</h1>
+            <p>At Optimize Controls, we believe exceptional control panel manufacturing starts with strong partnerships. Since our founding, we&apos;ve focused on helping OEMs, system integrators, and industrial automation companies outsource their panel production with complete confidence.</p>
             <p>We don&apos;t compete with our customers — we support them. By becoming an extension of your team, we help you increase production capacity, reduce lead times, and deliver high-quality automation systems on schedule.</p>
             <p>Whether you require a single custom panel or hundreds of production-ready assemblies, our experienced team is committed to delivering consistent quality, responsive communication, and dependable service from start to finish.</p>
             <div className="hero-actions">
@@ -223,7 +221,7 @@ function About() {
           </div>
           <div>
             <div style={{ position:'relative', border:'1px solid hsl(var(--card-border))', borderRadius:'14px', overflow:'hidden', boxShadow:'var(--card-shadow)', background:'hsl(var(--card))' }}>
-              <img className="about-photo" src={`${import.meta.env.BASE_URL}images/site-panel-full.jpg`} alt="About Optimize Controls" />
+              <img className="about-photo" src={`${import.meta.env.BASE_URL}images/img-about-us.jpeg`} alt="About Optimize Controls" />
             </div>
             <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'12px', marginTop:'12px' }}>
               <article style={{ border:'1px solid hsl(var(--card-border))', background:'hsl(var(--card))', padding:'16px', borderRadius:'10px', display:'grid', placeItems:'start', gap:'8px' }}>
