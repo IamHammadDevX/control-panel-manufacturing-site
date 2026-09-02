@@ -222,12 +222,25 @@ function About() {
             <div className="trust-chips"><span>Consistent quality</span><span>Responsive communication</span><span>Dependable service</span></div>
           </div>
           <div>
-            <img className="about-photo" src={`${import.meta.env.BASE_URL}images/control-panel-hero.png`} alt="About Optimize Controls" />
-            <div className="stats-grid" style={{ marginTop: 16 }}>
-              <div className="stat"><div className="stat-value">20<span style={{ color: 'hsl(var(--primary))' }}>+</span></div><div className="stat-label">Years of Experience</div></div>
-              <div className="stat"><div className="stat-value">NA</div><div className="stat-label">North America</div></div>
-              <div className="stat"><div className="stat-value">B2P</div><div className="stat-label">Build to Print</div></div>
-              <div className="stat" style={{ display: 'none' }} />
+            <div style={{ position:'relative', border:'1px solid hsl(var(--card-border))', borderRadius:'14px', overflow:'hidden', boxShadow:'var(--card-shadow)', background:'hsl(var(--card))' }}>
+              <img className="about-photo" src={`${import.meta.env.BASE_URL}images/site-panel-full.jpg`} alt="About Optimize Controls" />
+            </div>
+            <div style={{ display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'12px', marginTop:'12px' }}>
+              <article style={{ border:'1px solid hsl(var(--card-border))', background:'hsl(var(--card))', padding:'16px', borderRadius:'10px', display:'grid', placeItems:'start', gap:'8px' }}>
+                <ClipboardCheck size={18} style={{ color:'hsl(var(--primary))' }} />
+                <div style={{ font: '700 18px Inter, sans-serif', letterSpacing:'-.03em' }}>20<span style={{ color:'hsl(var(--primary))' }}>+</span></div>
+                <div style={{ font:'10px var(--app-font-mono)', color:'hsl(var(--muted-foreground))', letterSpacing:'.1em', textTransform:'uppercase' }}>Years · Experience</div>
+              </article>
+              <article style={{ border:'1px solid hsl(var(--card-border))', background:'hsl(var(--card))', padding:'16px', borderRadius:'10px', display:'grid', placeItems:'start', gap:'8px' }}>
+                <Globe2 size={18} style={{ color:'hsl(var(--primary))' }} />
+                <div style={{ font: '700 18px Inter, sans-serif', letterSpacing:'-.03em' }}>North America</div>
+                <div style={{ font:'10px var(--app-font-mono)', color:'hsl(var(--muted-foreground))', letterSpacing:'.1em', textTransform:'uppercase' }}>USA & Canada</div>
+              </article>
+              <article style={{ border:'1px solid hsl(var(--card-border))', background:'hsl(var(--card))', padding:'16px', borderRadius:'10px', display:'grid', placeItems:'start', gap:'8px' }}>
+                <FileCheck2 size={18} style={{ color:'hsl(var(--primary))' }} />
+                <div style={{ font: '700 18px Inter, sans-serif', letterSpacing:'-.03em' }}>Build to Print</div>
+                <div style={{ font:'10px var(--app-font-mono)', color:'hsl(var(--muted-foreground))', letterSpacing:'.1em', textTransform:'uppercase' }}>Your Specs</div>
+              </article>
             </div>
           </div>
         </div>
