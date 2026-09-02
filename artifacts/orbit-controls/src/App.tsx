@@ -209,7 +209,7 @@ function About() {
         <div className="container-wide about-split">
           <div>
             <div style={{ display:'inline-block', padding:'8px 12px', border:'1px solid hsl(var(--primary))', borderRadius:'999px', font:'700 10px var(--app-font-mono)', letterSpacing:'.1em', textTransform:'uppercase', color:'hsl(var(--primary))', marginBottom:'14px' }}>About Optimize Controls</div>
-            <h1 className="display" style={{ margin:'6px 0 18px 0', lineHeight:.95 }}>Your Trusted Partner<br />for Custom Control Panel<br />Manufacturing</h1>
+            <h1 className="display" style={{ margin:'6px 0 18px 0', lineHeight:.95, fontSize:'clamp(42px, 5.6vw, 86px)' }}>Your Trusted Partner<br />for Custom Control Panel<br />Manufacturing</h1>
             <p>At Optimize Controls, we believe exceptional control panel manufacturing starts with strong partnerships. Since our founding, we&apos;ve focused on helping OEMs, system integrators, and industrial automation companies outsource their panel production with complete confidence.</p>
             <p>We don&apos;t compete with our customers — we support them. By becoming an extension of your team, we help you increase production capacity, reduce lead times, and deliver high-quality automation systems on schedule.</p>
             <p>Whether you require a single custom panel or hundreds of production-ready assemblies, our experienced team is committed to delivering consistent quality, responsive communication, and dependable service from start to finish.</p>
