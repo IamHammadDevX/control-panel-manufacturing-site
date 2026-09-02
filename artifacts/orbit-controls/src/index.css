@@ -97,6 +97,7 @@
 .mono { font-family: var(--app-font-mono); letter-spacing: .08em; text-transform: uppercase; }
 .display { font-family: 'Inter', sans-serif; letter-spacing: -.055em; }
 .display { font-family: 'Inter', sans-serif; letter-spacing: -.055em; font-weight: 800; }
+.display em { color: hsl(var(--primary)); font-style: normal; }
 .eyebrow { color: hsl(var(--primary)); font-family: var(--app-font-mono); font-size: 10px; letter-spacing: .15em; text-transform: uppercase; }
 .muted { color: hsl(var(--muted-foreground)); }
 
