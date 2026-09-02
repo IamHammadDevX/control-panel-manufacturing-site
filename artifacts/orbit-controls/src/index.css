@@ -394,7 +394,7 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: url('/images/site-wiring-detail.jpg') center/cover no-repeat;
+  background: url('/images/img-blueprints-rolled.jpeg') center/cover no-repeat;
 }
 .section.blueprint-band .about-split > ul::after {
   content: 'BUILD-TO-PRINT DOCUMENTATION   •  •  •';
