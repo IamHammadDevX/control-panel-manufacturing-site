@@ -250,11 +250,14 @@ function About() {
       <section className="section">
         <div className="container-wide about-split">
           <div>
-            <div className="eyebrow">Proven experience</div>
+            <div className="pill">Manufacturing Excellence</div>
             <h2 className="section-title display">Built on More Than 20 Years<br />of Manufacturing Excellence</h2>
             <p>Decades on shop floor translate into disciplined builds and on‑time delivery. Clean wiring. Clear labels. Proper torque. Documented checks. Panels that install fast and run reliably.</p>
           </div>
-          <img className="about-photo" src={`${import.meta.env.BASE_URL}images/site-wiring-detail.jpg`} alt="Clean wiring and organized terminals" />
+          <div className="media-frame">
+            <img className="media-image" src={`${import.meta.env.BASE_URL}images/site-wiring-detail.jpg`} alt="Clean wiring and organized terminals" />
+            <div className="media-bar"><span>PRECISION CRAFTSMANSHIP</span><div className="media-dots"><i className="media-dot sky" /><i className="media-dot amber" /><i className="media-dot green" /></div></div>
+          </div>
         </div>
       </section>
 
