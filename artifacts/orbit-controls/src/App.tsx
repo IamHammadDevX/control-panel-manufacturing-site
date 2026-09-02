@@ -202,14 +202,15 @@ function PageIntro({ eyebrow, title, copy }: { eyebrow: string; title: ReactNode
 function About() {
   const values = [['Customer-focused partnership','Production support that fits your team and your schedule.'],['Precision manufacturing','Documented, repeatable builds with clean execution.'],['Quality without compromise','Defined checks before every release.'],['Scalable production','Prototype, pilot run, and repeat production support.']];
   const qa = ['Component verification','Wire and terminal inspection','Torque verification','Electrical continuity testing','Documentation review','Final visual inspection'];
-  return <Shell>
+  return (
+  <Shell>
     <Seo title="About Optimize Controls | Control Panel Manufacturing Partner" description="Optimize Controls is a precision control-panel manufacturing partner for OEMs, integrators, and automation teams." />
     <main>
       <section className="section">
         <div className="container-wide about-split">
           <div>
             <div style={{ display:'inline-block', padding:'8px 12px', border:'1px solid hsl(var(--primary))', borderRadius:'999px', font:'700 10px var(--app-font-mono)', letterSpacing:'.1em', textTransform:'uppercase', color:'hsl(var(--primary))', marginBottom:'14px' }}>About Optimize Controls</div>
-            <h1 className="display" style={{ margin:'6px 0 18px 0', lineHeight:.95, fontSize:'clamp(42px, 5.6vw, 86px)' }}>Your Trusted Partner<br />for Custom Control Panel<br />Manufacturing</h1>
+            <h1 className="display" style={{ margin:'6px 0 18px 0', lineHeight:.95, fontSize:'clamp(42px, 5.6vw, 86px)' }}>Your Trusted Partner<br />for <em>Custom Control Panel<br />Manufacturing</em></h1>
             <p>At Optimize Controls, we believe exceptional control panel manufacturing starts with strong partnerships. Since our founding, we&apos;ve focused on helping OEMs, system integrators, and industrial automation companies outsource their panel production with complete confidence.</p>
             <p>We don&apos;t compete with our customers — we support them. By becoming an extension of your team, we help you increase production capacity, reduce lead times, and deliver high-quality automation systems on schedule.</p>
             <p>Whether you require a single custom panel or hundreds of production-ready assemblies, our experienced team is committed to delivering consistent quality, responsive communication, and dependable service from start to finish.</p>
@@ -303,7 +304,6 @@ function About() {
               <article key={card.index} className="feature-panel" style={{ borderRadius:14, overflow:'hidden', padding:0 }}>
                 <div style={{ position:'relative', height:160, overflow:'hidden' }}>
                   <img src={`${import.meta.env.BASE_URL}images/${card.img}`} alt={card.title} style={{ width:'100%', height:'100%', objectFit:'cover', display:'block' }} />
-                  <div style={{ position:'absolute', top:10, right:12, background:'rgba(255,255,255,.85)', color:'#35506b', padding:'4px 8px', borderRadius:8, font:'700 10px var(--app-font-mono)', letterSpacing:'.08em' }}>{card.index}</div>
                 </div>
                 <div style={{ padding:22 }}>
                   <div className="feature-kicker">{card.badge}</div>
@@ -323,7 +323,7 @@ function About() {
             <div style={{ display:'inline-block', padding:'8px 12px', border:'1px solid hsl(var(--primary))', borderRadius:999, font:'700 10px var(--app-font-mono)', letterSpacing:'.1em', textTransform:'uppercase', color:'hsl(var(--primary))' }}>How we build</div>
             <h2 className="section-title display" style={{ marginTop:12 }}>Our Manufacturing Process</h2>
             <p className="section-intro" style={{ margin:'12px auto 0', maxWidth:680 }}>A documented, repeatable workflow — from project review through testing — so every panel arrives installation‑ready.</p>
-          </div>
+          </div>     
           <div className="process-grid compact-process">
             {[
               ['01','Project Review & Quotation','We review drawings, requirements, quantities, and delivery expectations.'],
@@ -393,7 +393,8 @@ function About() {
         </div>
       </section>
     </main>
-  </Shell>;
+  </Shell>
+  );
 }
 const services = [
   { icon: <CircuitBoard size={27} />, title: 'Custom control panels', copy: 'Complete electrical assemblies for machines, skids, process lines, and specialized equipment. Designed around the way your operators and technicians work.' },
