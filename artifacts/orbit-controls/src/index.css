@@ -2037,7 +2037,8 @@ html[data-theme='dark'] .quote-strip p {
 }
 
 .hero,
-.page-intro {
+.page-intro,
+.about-hero {
   background:
     radial-gradient(circle at 18% 16%, rgba(109, 190, 255, 0.22) 0 2px, transparent 3px),
     radial-gradient(circle at 36% 28%, rgba(109, 190, 255, 0.18) 0 1.5px, transparent 2.5px),
@@ -2065,7 +2066,8 @@ html[data-theme='dark'] .section-tight.blueprint-band {
 }
 
 html[data-theme='dark'] .hero,
-html[data-theme='dark'] .page-intro {
+html[data-theme='dark'] .page-intro,
+html[data-theme='dark'] .about-hero {
   background:
     radial-gradient(circle at 16% 18%, rgba(95, 175, 255, 0.28) 0 2px, transparent 3px),
     radial-gradient(circle at 32% 32%, rgba(95, 175, 255, 0.24) 0 1.5px, transparent 2.5px),
