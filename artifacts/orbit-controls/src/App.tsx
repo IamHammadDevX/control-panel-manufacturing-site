@@ -229,8 +229,8 @@ function Footer() {
         </div>
       </div>
       <div className="container-wide footer-bottom">
-        <span>Â© 2026 Optimize Controls, All rights reserved.</span>
-        <span>UL 508A SHOP Â· BUILT IN THE USA</span>
+        <span>© 2026 Optimize Controls, All rights reserved.</span>
+        <span>UL 508A SHOP - BUILT IN THE USA</span>
       </div>
     </footer>
   );
@@ -378,7 +378,7 @@ function Stats() {
       </div>
       <div className="stat">
         <div className="stat-value">2</div>
-        <div className="stat-label">Countries Â· USA & Canada</div>
+        <div className="stat-label">Countries - USA & Canada</div>
       </div>
       <div className="stat">
         <div className="stat-value">
@@ -463,7 +463,7 @@ function Home() {
                 integrate into an existing one. These control panels will
                 provide you with efficient process control, safety, and
                 reliability. We are a group of Chemical and Instrument engineers
-                with experience in different industriesâ€”Oil & Gas, Chemical,
+                with experience in different industries - Oil & Gas, Chemical,
                 Municipal water treatment. We can help you generate Controls
                 Narrative, Cause & Effect and eventually arrive at fully
                 functioning and safe ladder logic suited to your needs in a
@@ -503,7 +503,7 @@ function Home() {
               </div>
               <p className="section-intro">
                 Precision-built panels manufactured exactly to your engineering
-                drawings â€” assembled, wired, tested, and inspected for
+                drawings - assembled, wired, tested, and inspected for
                 dependable, long-term performance.
               </p>
             </div>
@@ -802,7 +802,7 @@ function Home() {
                   margin: "0 auto",
                 }}
               >
-                A documented, repeatable workflow â€” so every panel arrives
+                A documented, repeatable workflow - so every panel arrives
                 installation-ready and performs reliably from day one.
               </p>
             </div>
@@ -963,7 +963,7 @@ function Home() {
                   }}
                 >
                   Skilled technicians assemble each panel to your specifications
-                  using standardized procedures â€” with in-process quality
+                  using standardized procedures - with in-process quality
                   inspections at every stage of the build.
                 </p>
               </article>
@@ -1054,7 +1054,7 @@ function Home() {
                   margin: "0 auto",
                 }}
               >
-                A documented, repeatable workflow â€” so every panel arrives
+                A documented, repeatable workflow - so every panel arrives
                 installation-ready and performs reliably from day one.
               </p>
             </div>
@@ -1215,7 +1215,7 @@ function Home() {
                   }}
                 >
                   Skilled technicians assemble each panel to your specifications
-                  using standardized procedures â€” with in-process quality
+                  using standardized procedures - with in-process quality
                   inspections at every stage of the build.
                 </p>
               </article>
@@ -2338,7 +2338,7 @@ function ControlPanel() {
                 className="media-image"
                 src={`${import.meta.env.BASE_URL}images/img-talent.jpeg`}
                 alt="Optimize Controls team working on industrial control panel assembly"
-                style={{ objectFit: "contain", background: "#0b141b" }}
+                style={{ objectFit: "fill" }}
               />
               <div className="media-bar">
                 <span>SKILLED TEAM / PRODUCTION FLOOR</span>
@@ -2512,9 +2512,9 @@ function Contact() {
                 <div className="feature-kicker">HOURS</div>
                 <h3>Weekday support</h3>
                 <p>
-                  Mondayâ€“Friday
+                  Monday-Friday
                   <br />
-                  8:00 AMâ€“5:00 PM
+                  8:00 AM-5:00 PM
                 </p>
               </article>
             </div>
