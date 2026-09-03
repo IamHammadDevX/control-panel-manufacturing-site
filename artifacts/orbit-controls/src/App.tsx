@@ -222,6 +222,9 @@ function Footer() {
             <a href="tel:+13617650825" data-testid="link-footer-phone">
               +1 (361) 765-0825
             </a>
+            <a href="tel:+13468840500" data-testid="link-footer-phone-2">
+              +1 (346) 884-0500
+            </a>
             <span className="muted">
               13826 Trailville Dr, Houston, TX 77077
             </span>
