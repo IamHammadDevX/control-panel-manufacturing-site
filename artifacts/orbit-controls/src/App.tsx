@@ -3,6 +3,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   ArrowRight,
   Check,
+  ChevronUp,
   ChevronRight,
   CircuitBoard,
   ClipboardCheck,
@@ -257,6 +258,33 @@ function ScrollToHash() {
 
   return null;
 }
+
+function ScrollToTopButton() {
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setVisible(window.scrollY > 320);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return (
+    <button
+      type="button"
+      className={`scroll-top-btn ${visible ? "is-visible" : ""}`}
+      aria-label="Scroll to top"
+      data-testid="button-scroll-top"
+      onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+    >
+      <ChevronUp size={20} />
+    </button>
+  );
+}
+
 function Shell({ children }: { children: ReactNode }) {
   useEffect(() => {
     const targets = Array.from(
@@ -287,6 +315,7 @@ function Shell({ children }: { children: ReactNode }) {
       <Header />
       {children}
       <Footer />
+      <ScrollToTopButton />
     </div>
   );
 }
