@@ -2312,20 +2312,53 @@ function ControlPanel() {
         description="Optimize Controls manufactures precision industrial control panels for OEMs, system integrators, and automation teams."
       />
       <main>
-        <PageIntro
-          eyebrow="Custom industrial control panel manufacturing"
-          title={
-            <>
-              Precision-built panels
-              <br />
-              for{" "}
-              <span style={{ color: "hsl(var(--primary))" }}>production.</span>
-            </>
-          }
-          copy="Optimize Controls specializes in the design-support and manufacturing of high-quality custom control panels for a wide range of industrial applications. Whether you require a single prototype, a replacement panel, or high-volume production, we manufacture every panel to your exact specifications with a focus on quality, reliability, and performance.
-Our experienced team works closely with OEMs, machine builders, automation companies, and engineering firms to ensure every control panel is delivered ready for installation and built to perform in demanding industrial environments.
-"
-        />
+        <section className="page-intro">
+          <div className="container-wide about-split" style={{ alignItems: "center" }}>
+            <div>
+              <div className="eyebrow">Custom industrial control panel manufacturing</div>
+              <h1
+                className="display"
+                style={{
+                  margin: "18px 0 18px",
+                  fontSize: "clamp(36px, 5.2vw, 72px)",
+                  maxWidth: 620,
+                }}
+              >
+                Precision-built panels
+                <br />
+                for <span style={{ color: "hsl(var(--primary))" }}>production.</span>
+              </h1>
+              <p style={{ maxWidth: 520, fontSize: 14, lineHeight: 1.72 }}>
+                Optimize Controls specializes in the design-support and manufacturing of
+                high-quality custom control panels for a wide range of industrial
+                applications. Whether you require a single prototype, a replacement panel,
+                or high-volume production, we manufacture every panel to your exact
+                specifications with a focus on quality, reliability, and performance.
+              </p>
+              <p style={{ maxWidth: 520, fontSize: 14, lineHeight: 1.72, marginTop: 10 }}>
+                Our experienced team works closely with OEMs, machine builders, automation
+                companies, and engineering firms to ensure every control panel is delivered
+                ready for installation and built to perform in demanding industrial
+                environments.
+              </p>
+            </div>
+            <div className="media-frame">
+              <img
+                className="media-image"
+                src={`${import.meta.env.BASE_URL}images/img-talent.jpeg`}
+                alt="Optimize Controls team working on industrial control panel assembly"
+              />
+              <div className="media-bar">
+                <span>SKILLED TEAM / PRODUCTION FLOOR</span>
+                <div className="media-dots">
+                  <i className="media-dot sky" />
+                  <i className="media-dot amber" />
+                  <i className="media-dot green" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <section className="section blueprint-band">
           <div className="container-wide about-split">
             <div>
