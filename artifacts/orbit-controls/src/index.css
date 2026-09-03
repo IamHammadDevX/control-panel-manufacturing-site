@@ -2013,6 +2013,58 @@ html[data-theme='dark'] .quote-strip p {
   }
 }
 
+/* Hero-only grid + sky-stars background (light + dark) */
+.site-shell {
+  background: linear-gradient(180deg, #f3f8fd 0%, #eaf4fc 100%) !important;
+}
+
+.section,
+.section-tight {
+  background-image: none !important;
+}
+
+.hero,
+.page-intro {
+  background:
+    radial-gradient(circle at 18% 16%, rgba(109, 190, 255, 0.22) 0 2px, transparent 3px),
+    radial-gradient(circle at 36% 28%, rgba(109, 190, 255, 0.18) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 67% 14%, rgba(109, 190, 255, 0.2) 0 2px, transparent 3px),
+    radial-gradient(circle at 86% 24%, rgba(109, 190, 255, 0.17) 0 1.5px, transparent 2.5px),
+    linear-gradient(rgba(151, 188, 218, 0.18) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(151, 188, 218, 0.18) 1px, transparent 1px),
+    radial-gradient(circle at 76% 18%, rgba(58, 151, 225, 0.15), transparent 26rem),
+    linear-gradient(180deg, #f6fbff 0%, #edf6fd 100%) !important;
+  background-size: auto, auto, auto, auto, 40px 40px, 40px 40px, auto, auto !important;
+}
+
+html[data-theme='dark'] .site-shell {
+  background: #071322 !important;
+  background-image: none !important;
+}
+
+html[data-theme='dark'] .section,
+html[data-theme='dark'] .section-tight,
+html[data-theme='dark'] .section.dark-band,
+html[data-theme='dark'] .section-tight.dark-band,
+html[data-theme='dark'] .section.blueprint-band,
+html[data-theme='dark'] .section-tight.blueprint-band {
+  background-image: none !important;
+}
+
+html[data-theme='dark'] .hero,
+html[data-theme='dark'] .page-intro {
+  background:
+    radial-gradient(circle at 16% 18%, rgba(95, 175, 255, 0.28) 0 2px, transparent 3px),
+    radial-gradient(circle at 32% 32%, rgba(95, 175, 255, 0.24) 0 1.5px, transparent 2.5px),
+    radial-gradient(circle at 64% 14%, rgba(95, 175, 255, 0.26) 0 2px, transparent 3px),
+    radial-gradient(circle at 84% 27%, rgba(95, 175, 255, 0.22) 0 1.5px, transparent 2.5px),
+    linear-gradient(rgba(86, 139, 193, 0.14) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(86, 139, 193, 0.14) 1px, transparent 1px),
+    radial-gradient(circle at 76% 18%, rgba(47, 138, 230, 0.24), transparent 26rem),
+    linear-gradient(180deg, #071322 0%, #0b1a2d 100%) !important;
+  background-size: auto, auto, auto, auto, 40px 40px, 40px 40px, auto, auto !important;
+}
+
 .scroll-top-btn {
   position: fixed;
   right: clamp(16px, 2.8vw, 34px);
