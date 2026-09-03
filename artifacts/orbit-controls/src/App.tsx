@@ -2296,15 +2296,6 @@ function ControlPanel() {
     "Customer Standards",
     "Engineering Specifications",
   ];
-  const quality = [
-    "Component verification",
-    "Wire identification and routing",
-    "Torque verification",
-    "Electrical continuity testing",
-    "Functional testing when specified",
-    "Documentation review",
-    "Final visual inspection",
-  ];
   return (
     <Shell>
       <Seo
@@ -2347,6 +2338,7 @@ function ControlPanel() {
                 className="media-image"
                 src={`${import.meta.env.BASE_URL}images/img-talent.jpeg`}
                 alt="Optimize Controls team working on industrial control panel assembly"
+                style={{ objectFit: "contain", background: "#0b141b" }}
               />
               <div className="media-bar">
                 <span>SKILLED TEAM / PRODUCTION FLOOR</span>
@@ -2407,103 +2399,6 @@ function ControlPanel() {
                   <i className="media-dot green" />
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-        <section id="testing" className="section">
-          <div className="container-wide about-split">
-            <div>
-              <div className="eyebrow">Quality at every stage</div>
-              <h2 className="section-title display">
-                Installation-ready.
-                <br />
-                <span style={{ color: "hsl(var(--primary))" }}>
-                  Reliable from day one.
-                </span>
-              </h2>
-              <p className="section-intro" style={{ marginTop: 20 }}>
-                Inspection and testing are integrated through assemblyâ€”not
-                added as an afterthought.
-              </p>
-            </div>
-            <ul className="feature-list" style={{ marginTop: 0 }}>
-              {quality.map((item) => (
-                <li key={item}>
-                  <ClipboardCheck size={17} /> {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </section>
-        <section className="section-tight dark-band">
-          <div className="container-wide">
-            <div className="section-header">
-              <div>
-                <div className="eyebrow">Industries we serve</div>
-                <h2 className="section-title display">
-                  Dependable panels
-                  <br />
-                  across{" "}
-                  <span style={{ color: "hsl(var(--primary))" }}>
-                    industry.
-                  </span>
-                </h2>
-              </div>
-              <p className="section-intro">
-                Control-panel manufacturing for applications where reliable
-                operations are non-negotiable.
-              </p>
-            </div>
-            <div className="industry-cloud">
-              {[
-                "Manufacturing",
-                "Food & Beverage",
-                "Packaging",
-                "Material Handling",
-                "Water & Wastewater",
-                "Oil & Gas",
-                "Mining",
-                "Renewable Energy",
-                "Automotive",
-                "Pharmaceutical",
-                "Chemical Processing",
-                "Industrial Automation",
-              ].map((item) => (
-                <span key={item}>{item}</span>
-              ))}
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container-wide about-split">
-            <div>
-              <div className="eyebrow">Prototype to production</div>
-              <h2 className="section-title display">
-                Support at every
-                <br />
-                <span style={{ color: "hsl(var(--primary))" }}>
-                  project stage.
-                </span>
-              </h2>
-            </div>
-            <div>
-              <p>
-                Whether you are validating a new machine or increasing
-                production capacity, every panel gets disciplined manufacturing
-                attention.
-              </p>
-              <ul className="feature-list">
-                <li>
-                  <Factory size={17} /> Prototype builds and validation units
-                </li>
-                <li>
-                  <Factory size={17} /> Pilot and low-volume production
-                </li>
-                <li>
-                  <Factory size={17} /> High-volume and ongoing production
-                  support
-                </li>
-              </ul>
             </div>
           </div>
         </section>
