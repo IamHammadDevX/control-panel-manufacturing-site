@@ -2411,8 +2411,7 @@ function ControlPanel() {
               panel partner?
             </h2>
             <p>
-              Send drawings or project requirements. WETS AI will help define
-              the right manufacturing path.
+              Call us to discuss your needs.
             </p>
             <div className="hero-actions">
               <Link href="/contact" className="button-primary">
