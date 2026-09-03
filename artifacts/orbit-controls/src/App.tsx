@@ -2488,6 +2488,8 @@ function Contact() {
                 <div className="feature-kicker">PHONE</div>
                 <h3>Talk to our team</h3>
                 <a href="tel:+13617650825">+1 (361) 765-0825</a>
+                <br />
+                <a href="tel:+13468840500">+1 (346) 884-0500</a>
               </article>
               <article className="feature-panel">
                 <Mail className="service-icon" size={25} />
@@ -2525,10 +2527,10 @@ function Contact() {
             <div>
               <div className="eyebrow">Request a quote</div>
               <h2 className="section-title display">
-                Tell us what
+                Tell us about
                 <br />
                 you&apos;re{" "}
-                <span style={{ color: "hsl(var(--primary))" }}>building.</span>
+                <span style={{ color: "hsl(var(--primary))" }}>project.</span>
               </h2>
               <p className="section-intro" style={{ marginTop: 20 }}>
                 Share enough to begin. We will follow up with the technical
@@ -2673,47 +2675,6 @@ function Contact() {
                   </button>
                 </form>
               )}
-            </div>
-          </div>
-        </section>
-        <section className="section">
-          <div className="container-wide">
-            <div className="section-header">
-              <div>
-                <div className="eyebrow">Frequently asked questions</div>
-                <h2 className="section-title display">
-                  Clear answers,
-                  <br />
-                  <span style={{ color: "hsl(var(--primary))" }}>
-                    right away.
-                  </span>
-                </h2>
-              </div>
-            </div>
-            <div className="faq-grid">
-              {[
-                [
-                  "What do you need for a quote?",
-                  "Drawings, a bill of materials, panel layout, quantities, and timing help us quote accurately. A project description is enough to start.",
-                ],
-                [
-                  "Can you build from customer drawings?",
-                  "Yes. Build-to-print manufacturing is a core WETS AI capability.",
-                ],
-                [
-                  "Do you support prototype and production builds?",
-                  "Yes. We support prototypes, pilot runs, repeat orders, and high-volume production.",
-                ],
-                [
-                  "Do you ship throughout North America?",
-                  "We support customers across the United States and Canada.",
-                ],
-              ].map(([q, a]) => (
-                <article className="feature-panel" key={q}>
-                  <h3>{q}</h3>
-                  <p>{a}</p>
-                </article>
-              ))}
             </div>
           </div>
         </section>

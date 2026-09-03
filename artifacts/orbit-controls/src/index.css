@@ -345,7 +345,7 @@
 .media-dot.green { background:#3ad29f; box-shadow:0 0 10px rgba(58,210,159,.35); }
 
 .contact-card-grid, .faq-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:16px; }
-.contact-card-grid .feature-panel a { color:#dcecf0; text-decoration:none; }
+.contact-card-grid .feature-panel a { color:#1f5f9c; text-decoration:none; font-weight:600; }
 .contact-card-grid .feature-panel a:hover { color:hsl(var(--primary)); }
 .quote-guidance { margin-top:30px; padding:20px; border-left:2px solid hsl(var(--primary)); background:rgba(83,198,220,.05); }
 @media (max-width:800px) { .contact-card-grid, .faq-grid { grid-template-columns:1fr 1fr; } }
@@ -944,6 +944,10 @@ html[data-theme='dark'] .nav-link,
 html[data-theme='dark'] .contact-item a,
 html[data-theme='dark'] .contact-item span {
   color: #edf6ff;
+}
+
+html[data-theme='dark'] .contact-card-grid .feature-panel a {
+  color: #dcecf0;
 }
 
 html[data-theme='dark'] .brand-sub,
