@@ -1682,7 +1682,7 @@ function About() {
         description="Optimize Controls is a precision control-panel manufacturing partner for OEMs, integrators, and automation teams."
       />
       <main>
-        <section className="section">
+        <section className="section about-hero">
           <div className="container-wide about-split">
             <div>
               <div

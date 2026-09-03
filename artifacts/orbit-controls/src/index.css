@@ -531,7 +531,8 @@ body {
 }
 
 .hero,
-.page-intro {
+.page-intro,
+.about-hero {
   background:
     linear-gradient(rgba(151, 188, 218, .20) 1px, transparent 1px),
     linear-gradient(90deg, rgba(151, 188, 218, .20) 1px, transparent 1px),
@@ -894,7 +895,8 @@ html[data-theme='dark'] .site-shell {
 }
 
 html[data-theme='dark'] .hero,
-html[data-theme='dark'] .page-intro {
+html[data-theme='dark'] .page-intro,
+html[data-theme='dark'] .about-hero {
   background:
     linear-gradient(rgba(76, 123, 170, .14) 1px, transparent 1px),
     linear-gradient(90deg, rgba(76, 123, 170, .14) 1px, transparent 1px),
@@ -1682,6 +1684,17 @@ html[data-theme='dark'] .section-tight {
     linear-gradient(rgba(76, 123, 170, .12) 1px, transparent 1px),
     linear-gradient(90deg, rgba(76, 123, 170, .12) 1px, transparent 1px) !important;
   background-size: 40px 40px !important;
+}
+
+html[data-theme='dark'] .quote-strip.blueprint-band {
+  background: #020a19 !important;
+  border-top: 1px solid rgba(96, 146, 199, 0.24) !important;
+  border-bottom: 0 !important;
+}
+
+html[data-theme='dark'] .site-footer {
+  background: #071a32 !important;
+  border-top: 1px solid rgba(125, 176, 228, 0.28) !important;
 }
 
 html[data-theme='dark'] .section.dark-band,
