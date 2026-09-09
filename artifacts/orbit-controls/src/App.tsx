@@ -114,10 +114,9 @@ function Header() {
           data-testid="link-brand"
           onClick={() => setOpen(false)}
         >
-          <span className="brand-mark" aria-hidden="true" />
+          <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.png`} alt="" />
           <span>
             <span className="brand-word">Optimize Controls</span>
-            <span className="brand-sub">PRECISION / POWER / PROOF</span>
           </span>
         </Link>
         <nav className="desktop-nav" aria-label="Primary navigation">
@@ -172,20 +171,19 @@ function Header() {
 
 function Footer() {
   const [currentPath] = useLocation();
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
   return (
     <footer className="site-footer">
       <div className="container-wide footer-grid">
         <div>
-          <Link href="/" className="brand" data-testid="link-footer-brand">
-            <span className="brand-mark" aria-hidden="true" />
+          <Link href="/" className="brand" data-testid="link-footer-brand" onClick={scrollToTop}>
+            <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.png`} alt="" />
             <span>
               <span className="brand-word">Optimize Controls</span>
-              <span className="brand-sub">PRECISION / POWER / PROOF</span>
             </span>
           </Link>
           <p className="footer-copy">
-            Custom control panels for the machines that keep North American
-            industry moving.
+            Custom control panels to suit your requirement.
           </p>
         </div>
         <div>
@@ -195,6 +193,7 @@ function Footer() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={scrollToTop}
                 data-active={currentPath === item.href ? "true" : undefined}
                 data-testid={`link-footer-${item.label.toLowerCase().replaceAll(" ", "-")}`}
               >
@@ -206,9 +205,7 @@ function Footer() {
         <div>
           <div className="footer-heading">Capabilities</div>
           <div className="footer-links">
-            <Link href="/control-panel#build">Build-to-print</Link>
-            <Link href="/control-panel#engineering">Panel engineering</Link>
-            <Link href="/control-panel#testing">Testing & validation</Link>
+            <Link href="/control-panel#process" onClick={scrollToTop}>Our Process</Link>
           </div>
         </div>
         <div>
@@ -498,8 +495,7 @@ function Home() {
                 with experience in different industries - Oil & Gas, Chemical,
                 Municipal water treatment. We can help you generate Controls
                 Narrative, Cause & Effect and eventually arrive at fully
-                functioning and safe ladder logic suited to your needs in a
-                modern style.
+                functioning and safe ladder logic suited to your needs.
               </p>
               <div className="hero-actions">
                 <Link
@@ -533,11 +529,6 @@ function Home() {
                   Manufacturing Services
                 </h2>
               </div>
-              <p className="section-intro">
-                Precision-built panels manufactured exactly to your engineering
-                drawings - assembled, wired, tested, and inspected for
-                dependable, long-term performance.
-              </p>
             </div>
             <div
               style={{
@@ -1292,76 +1283,7 @@ function Home() {
             </div>
           </div>
         </section>
-        <section className="section quality-showcase">
-          <div className="container-wide quality-showcase-grid">
-            <div className="quality-copy">
-              <div className="eyebrow quality-eyebrow">WHY CHOOSE US</div>
-              <h2 className="section-title display">
-                Built on Experience.
-                <br />
-                Driven by Quality.
-              </h2>
-              <p>
-                For more than two decades, our team has been helping customers
-                deliver reliable automation systems through precisely
-                manufactured control panels. When you partner with us, you gain
-                more than a panel shop — you gain a dependable manufacturing
-                partner committed to your success.
-              </p>
-              <div className="quality-reasons">
-                {[
-                  "UL 508A Certified Manufacturing",
-                  "Customer-Supplied Design Builds",
-                  "Rigorous Quality Control & Testing",
-                  "High-Volume Production Capabilities",
-                  "Fast, Reliable Lead Times",
-                  "Experienced Manufacturing Team",
-                  "Clear Project Communication",
-                  "North American Manufacturing",
-                  "Flexible Production Capacity",
-                  "Competitive Pricing Without Compromising Quality",
-                ].map((item) => (
-                  <div className="quality-reason" key={item}>
-                    <Check size={16} />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="quality-panel-wrap">
-              <p className="quality-panel-intro">
-                Every control panel undergoes comprehensive inspection and
-                testing before shipment. Our standardized manufacturing process
-                ensures:
-              </p>
-              <div className="quality-card">
-                <div className="quality-card-head">
-                  <strong>Quality You Can Trust</strong>
-                  <span>QC · INSP / 100%</span>
-                </div>
-                <div className="quality-card-list">
-                  {[
-                    "Accurate Component Installation",
-                    "Clean Wire Routing",
-                    "Proper Torque Verification",
-                    "Electrical Testing",
-                    "Documentation Review",
-                    "Final Quality Inspection",
-                  ].map((item) => (
-                    <div className="quality-check" key={item}>
-                      <Check size={14} />
-                      <span>{item}</span>
-                    </div>
-                  ))}
-                </div>
-                <div className="quality-result">
-                  THE RESULT IS A PANEL THAT ARRIVES INSTALLATION-READY AND
-                  PERFORMS RELIABLY IN THE FIELD.
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>{" "}
+
         <section className="quote-strip blueprint-band">
           <div className="container-wide">
             <h2 className="display">Tell us about your project</h2>
@@ -1772,7 +1694,7 @@ function About() {
         </section>
 
         {/* Process + QA */}
-        <section className="section">
+        <section id="process" className="section">
           <div className="container-wide">
             <div style={{ textAlign: "center", marginBottom: 34 }}>
               <div
