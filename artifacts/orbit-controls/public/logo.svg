@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="Optimize Controls">
+  <defs>
+    <linearGradient id="ring" x1="18" y1="18" x2="112" y2="112" gradientUnits="userSpaceOnUse"><stop stop-color="#42d7f5"/><stop offset="1" stop-color="#0caee7"/></linearGradient>
+    <linearGradient id="trace" x1="22" y1="105" x2="112" y2="18" gradientUnits="userSpaceOnUse"><stop stop-color="#266ff2"/><stop offset="1" stop-color="#1975e8"/></linearGradient>
+  </defs>
+  <circle cx="64" cy="64" r="53" fill="url(#ring)"/>
+  <circle cx="64" cy="64" r="31" fill="#fff"/>
+  <g fill="none" stroke="url(#trace)" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
+    <path d="M18 104 39 83h21l49-49"/><path d="M18 119 49 88h20l43-43"/><path d="m34 109 14-14V75l16-16h25l24-24"/><path d="M27 88 42 73h19l13-13h17"/>
+  </g>
+  <g fill="#fff" stroke="url(#trace)" stroke-width="4"><circle cx="18" cy="104" r="5"/><circle cx="18" cy="119" r="5"/><circle cx="34" cy="109" r="5"/><circle cx="27" cy="88" r="5"/></g>
+</svg>

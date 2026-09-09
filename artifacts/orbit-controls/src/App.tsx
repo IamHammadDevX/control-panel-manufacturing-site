@@ -114,7 +114,7 @@ function Header() {
           data-testid="link-brand"
           onClick={() => setOpen(false)}
         >
-          <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.png`} alt="" />
+          <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" />
           <span>
             <span className="brand-word">Optimize Controls</span>
           </span>
@@ -177,7 +177,7 @@ function Footer() {
       <div className="container-wide footer-grid">
         <div>
           <Link href="/" className="brand" data-testid="link-footer-brand" onClick={scrollToTop}>
-            <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.png`} alt="" />
+            <img className="brand-logo" src={`${import.meta.env.BASE_URL}logo.svg`} alt="" />
             <span>
               <span className="brand-word">Optimize Controls</span>
             </span>
