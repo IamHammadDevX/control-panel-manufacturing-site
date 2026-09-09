@@ -11,8 +11,8 @@
   </defs>
   <circle cx="50" cy="50" r="38" fill="none" stroke="url(#ring)" stroke-width="13"/>
   <g fill="none" stroke="url(#trace)" stroke-linecap="round" stroke-linejoin="round" stroke-width="4">
-    <path d="M14 77h19l16-16h17l20-20"/>
-    <path d="M14 87h24l16-16h18l14-14"/>
+    <path d="M31 66h8l14-14h14l15-15"/>
+    <path d="M31 76h12l14-14h16l11-11"/>
   </g>
-  <g fill="#fff" stroke="url(#trace)" stroke-width="3"><circle cx="14" cy="77" r="4"/><circle cx="14" cy="87" r="4"/></g>
+  <g fill="#fff" stroke="url(#trace)" stroke-width="3"><circle cx="31" cy="66" r="4"/><circle cx="31" cy="76" r="4"/></g>
 </svg>
