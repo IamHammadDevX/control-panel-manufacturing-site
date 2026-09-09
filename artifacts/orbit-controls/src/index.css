@@ -114,6 +114,7 @@
   display: block;
   flex: 0 0 auto;
   filter: drop-shadow(0 6px 12px rgba(21, 117, 232, .20));
+  transform-origin: center;
   transition: transform .28s ease, filter .28s ease;
 }
 
