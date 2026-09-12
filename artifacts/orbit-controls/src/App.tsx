@@ -1631,8 +1631,9 @@ function About() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(4,1fr)",
+                gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))",
                 gap: 16,
+                alignItems: "stretch",
               }}
             >
               {[
@@ -1673,7 +1674,7 @@ function About() {
                   <div
                     style={{
                       position: "relative",
-                      height: 160,
+                      height: "clamp(150px, 24vw, 190px)",
                       overflow: "hidden",
                     }}
                   >
@@ -1731,8 +1732,9 @@ function About() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(4,1fr)",
+                gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 280px), 1fr))",
                 gap: 16,
+                alignItems: "stretch",
               }}
             >
               {[
@@ -1767,6 +1769,7 @@ function About() {
                     padding: "22px 20px",
                     boxShadow: "var(--card-shadow)",
                     minHeight: "auto",
+                    minWidth: 0,
                   }}
                 >
                   <div
@@ -1785,8 +1788,18 @@ function About() {
                   >
                     {step.num}
                   </div>
-                  <h3 style={{ margin: "14px 0 8px" }}>{step.title}</h3>
-                  <p style={{ margin: 0 }}>{step.copy}</p>
+                  <h3
+                    style={{
+                      margin: "14px 0 8px",
+                      fontSize: "clamp(18px, 2.2vw, 22px)",
+                      lineHeight: 1.24,
+                    }}
+                  >
+                    {step.title}
+                  </h3>
+                  <p style={{ margin: 0, fontSize: 14, lineHeight: 1.58 }}>
+                    {step.copy}
+                  </p>
                 </article>
               ))}
             </div>
@@ -2137,6 +2150,8 @@ function ControlPanel() {
 }
 function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
   const [form, setForm] = useState({
     name: "",
     company: "",
@@ -2147,39 +2162,91 @@ function Contact() {
     timeline: "",
     testing: "",
     details: "",
+    botcheck: "",
   });
   const update = (key: keyof typeof form, value: string) =>
     setForm((current) => ({ ...current, [key]: value }));
-  const submit = (event: FormEvent<HTMLFormElement>) => {
+  const submit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const recipients = "info@optimizecontrols.com,optimizecontrols@gmail.com";
-    const subject = encodeURIComponent(
-      `Quote Request - ${form.company || form.name || "Optimize Controls Website"}`,
-    );
-    const body = encodeURIComponent(
-      [
-        "New quote request from optimizecontrols.com",
-        "",
-        `Name: ${form.name}`,
-        `Company: ${form.company}`,
-        `Email: ${form.email}`,
-        `Phone: ${form.phone || "N/A"}`,
-        `Panel type: ${form.project}`,
-        `Quantity: ${form.quantity || "N/A"}`,
-        `Timeline: ${form.timeline || "N/A"}`,
-        `Testing/Certification: ${form.testing || "N/A"}`,
-        "",
-        "Project details:",
-        form.details,
-      ].join("\n"),
-    );
+    const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+    if (!accessKey) {
+      setSubmitError("Form service is not configured. Add VITE_WEB3FORMS_ACCESS_KEY in Vercel environment variables.");
+      return;
+    }
 
-    window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`;
-    setSubmitted(true);
+    setIsSubmitting(true);
+    setSubmitError("");
+
+    const message = [
+      "OPTIMIZE CONTROLS - NEW QUOTE REQUEST",
+      "============================================================",
+      "CLIENT DETAILS",
+      `Name: ${form.name}`,
+      `Company: ${form.company}`,
+      `Email: ${form.email}`,
+      `Phone: ${form.phone || "N/A"}`,
+      "",
+      "PROJECT REQUIREMENTS",
+      `Panel Type: ${form.project}`,
+      `Quantity: ${form.quantity || "N/A"}`,
+      `Delivery Timeline: ${form.timeline || "N/A"}`,
+      `Testing / Certification: ${form.testing || "N/A"}`,
+      "",
+      "PROJECT DESCRIPTION",
+      form.details,
+      "",
+      "Submitted from: optimizecontrols.com/contact",
+    ].join("\n");
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          access_key: accessKey,
+          subject: `Quote Request - ${form.company || form.name || "Website Lead"}`,
+          from_name: "Optimize Controls Website",
+          replyto: form.email,
+          name: form.name,
+          company: form.company,
+          email: form.email,
+          phone: form.phone,
+          project: form.project,
+          quantity: form.quantity,
+          timeline: form.timeline,
+          testing: form.testing,
+          message,
+          botcheck: form.botcheck,
+        }),
+      });
+
+      const result = (await response.json()) as {
+        success?: boolean;
+        message?: string;
+      };
+
+      if (!response.ok || !result.success) {
+        throw new Error(result.message || "Could not send request. Please try again.");
+      }
+
+      setSubmitted(true);
+    } catch (error) {
+      setSubmitError(
+        error instanceof Error
+          ? error.message
+          : "Could not send request. Please try again.",
+      );
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   const reset = () => {
     setSubmitted(false);
+    setSubmitError("");
     setForm({
       name: "",
       company: "",
@@ -2190,6 +2257,7 @@ function Contact() {
       timeline: "",
       testing: "",
       details: "",
+      botcheck: "",
     });
   };
   return (
@@ -2292,6 +2360,16 @@ function Contact() {
                 </div>
               ) : (
                 <form onSubmit={submit}>
+                  <input
+                    type="text"
+                    name="botcheck"
+                    tabIndex={-1}
+                    autoComplete="off"
+                    value={form.botcheck}
+                    onChange={(e) => update("botcheck", e.target.value)}
+                    style={{ display: "none" }}
+                    aria-hidden="true"
+                  />
                   <div className="form-grid">
                     <div className="field">
                       <label htmlFor="name">Full name</label>
@@ -2392,8 +2470,27 @@ function Contact() {
                       />
                     </div>
                   </div>
+                  {submitError ? (
+                    <p
+                      role="alert"
+                      style={{
+                        marginTop: 14,
+                        marginBottom: 0,
+                        padding: "12px 14px",
+                        border: "1px solid rgba(214, 72, 72, 0.45)",
+                        borderRadius: 8,
+                        background: "rgba(214, 72, 72, 0.09)",
+                        color: "#ffd0d0",
+                        fontSize: 13,
+                        lineHeight: 1.45,
+                      }}
+                    >
+                      {submitError}
+                    </p>
+                  ) : null}
                   <button type="submit" className="button-primary form-submit">
-                    Submit Project Brief <ArrowRight size={15} />
+                    {isSubmitting ? "Sending request..." : "Submit Project Brief"}{" "}
+                    <ArrowRight size={15} />
                   </button>
                 </form>
               )}
