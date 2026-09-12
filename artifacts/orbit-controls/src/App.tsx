@@ -2272,20 +2272,6 @@ function Contact() {
                 Share enough to begin. We will follow up with the technical
                 questions that matter.
               </p>
-              <div className="quote-guidance">
-                <strong>For an accurate quote, include:</strong>
-                <ul className="feature-list">
-                  <li>
-                    <FileCheck2 size={16} /> Drawings, schematics, or I/O list
-                  </li>
-                  <li>
-                    <ClipboardCheck size={16} /> Quantity and target delivery
-                  </li>
-                  <li>
-                    <ShieldCheck size={16} /> Required testing or certifications
-                  </li>
-                </ul>
-              </div>
             </div>
             <div className="form-frame">
               {submitted ? (
