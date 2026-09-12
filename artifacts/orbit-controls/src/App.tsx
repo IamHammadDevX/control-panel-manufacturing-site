@@ -217,6 +217,12 @@ function Footer() {
             >
               info@optimizecontrols.com
             </a>
+            <a
+              href="mailto:optimizecontrols@gmail.com"
+              data-testid="link-footer-email-2"
+            >
+              optimizecontrols@gmail.com
+            </a>
             <a href="tel:+13617650825" data-testid="link-footer-phone">
               +1 (361) 765-0825
             </a>
@@ -2146,6 +2152,30 @@ function Contact() {
     setForm((current) => ({ ...current, [key]: value }));
   const submit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    const recipients = "info@optimizecontrols.com,optimizecontrols@gmail.com";
+    const subject = encodeURIComponent(
+      `Quote Request - ${form.company || form.name || "Optimize Controls Website"}`,
+    );
+    const body = encodeURIComponent(
+      [
+        "New quote request from optimizecontrols.com",
+        "",
+        `Name: ${form.name}`,
+        `Company: ${form.company}`,
+        `Email: ${form.email}`,
+        `Phone: ${form.phone || "N/A"}`,
+        `Panel type: ${form.project}`,
+        `Quantity: ${form.quantity || "N/A"}`,
+        `Timeline: ${form.timeline || "N/A"}`,
+        `Testing/Certification: ${form.testing || "N/A"}`,
+        "",
+        "Project details:",
+        form.details,
+      ].join("\n"),
+    );
+
+    window.location.href = `mailto:${recipients}?subject=${subject}&body=${body}`;
     setSubmitted(true);
   };
   const reset = () => {
@@ -2200,6 +2230,10 @@ function Contact() {
                 <a href="mailto:info@optimizecontrols.com">
                   info@optimizecontrols.com
                 </a>
+                <br />
+                <a href="mailto:optimizecontrols@gmail.com">
+                  optimizecontrols@gmail.com
+                </a>
               </article>
               <article className="feature-panel">
                 <MapPin className="service-icon" size={25} />
@@ -2231,7 +2265,7 @@ function Contact() {
               <h2 className="section-title display">
                 Tell us about
                 <br />
-                you&apos;re{" "}
+                your{" "}
                 <span style={{ color: "hsl(var(--primary))" }}>project.</span>
               </h2>
               <p className="section-intro" style={{ marginTop: 20 }}>
